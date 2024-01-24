@@ -2,6 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
+//email is key and {friend data object} is value
 let friends = {
 	'johnsmith@gamil.com': {
 		firstName: 'John',
@@ -32,6 +33,7 @@ router.get('/:email', (req, res) => {
 });
 
 // POST request: Add a new friend
+//if the body contains {data object}
 router.post('/', (req, res) => {
 	if (req.body.email) {
 		friends[req.body.email] = {
