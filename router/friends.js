@@ -42,9 +42,7 @@ router.post('/', (req, res) => {
 			DOB: req.body.DOB,
 		};
 	}
-	res.send(
-		'The user Hello World' + ' ' + req.body.firstName + ' Has been added!'
-	);
+	res.send('The user' + ' ' + req.body.firstName + ' Has been added!');
 });
 
 // PUT request: Update the details of a friend with email id
